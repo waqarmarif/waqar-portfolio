@@ -9,21 +9,36 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  const scrollTo = (id) => {
+    const el = document.getElementById(id)
+    if (el) el.scrollIntoView({ behavior: 'smooth' })
+  }
+
   const links = ['About', 'Skills', 'Experience', 'Projects', 'Education', 'Contact']
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container">
         <div className="navbar-inner">
-          <a href="#home" className="navbar-logo">MW</a>
+          <button className="navbar-logo" onClick={() => scrollTo('home')} style={{ border: 'none', cursor: 'pointer' }}>MW</button>
           <ul className="navbar-links">
             {links.map(link => (
               <li key={link}>
-                <a href={`#${link.toLowerCase()}`}>{link}</a>
+                <a
+                  href="#"
+                  onClick={e => { e.preventDefault(); scrollTo(link.toLowerCase()) }}
+                >
+                  {link}
+                </a>
               </li>
             ))}
           </ul>
-          <a href="#contact" className="btn btn-primary navbar-cta">Hire Me</a>
+          <button
+            className="btn btn-primary navbar-cta"
+            onClick={() => scrollTo('contact')}
+          >
+            Hire Me
+          </button>
           <button className="hamburger" aria-label="menu">
             <span /><span /><span />
           </button>

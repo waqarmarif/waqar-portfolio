@@ -26,12 +26,12 @@ export default function Hero() {
               working with HTML5, PHP, JavaScript, MySQL, and WordPress.
             </p>
             <div className="hero-buttons">
-              <a href="#projects" className="btn btn-primary">
+              <button className="btn btn-primary" onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
                 <i className="fas fa-code" /> View Projects
-              </a>
-              <a href="#contact" className="btn btn-outline">
+              </button>
+              <button className="btn btn-outline" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
                 <i className="fas fa-envelope" /> Contact Me
-              </a>
+              </button>
             </div>
             <div className="hero-stats">
               <div className="hero-stat">

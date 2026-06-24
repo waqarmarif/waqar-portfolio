@@ -80,9 +80,9 @@ export default function About() {
               </div>
             </div>
 
-            <a href="#contact" className="btn btn-primary">
+            <button className="btn btn-primary" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
               <i className="fas fa-paper-plane" /> Get In Touch
-            </a>
+            </button>
           </div>
         </div>
       </div>
