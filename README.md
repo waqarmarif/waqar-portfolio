@@ -4,7 +4,7 @@ Personal portfolio website of **Muhammad Waqar**, WordPress Developer & Web Deve
 
 ## Live Demo
 
-> Deploy kar ke link yahan add karo
+> https://waqar-portfolio-pearl.vercel.app/
 
 ## Tech Stack
 
