@@ -1,3 +1,5 @@
+import profileImg from '../assets/profile.png'
+
 export default function Hero() {
   return (
     <section className="hero" id="home">
@@ -52,7 +54,7 @@ export default function Hero() {
           <div className="hero-visual">
             <div className="avatar-wrapper">
               <div className="avatar-circle">
-                <i className="fas fa-user" />
+                <img src={profileImg} alt="Muhammad Waqar" />
               </div>
               <div className="floating-tag tag-wp">
                 <i className="fab fa-wordpress" style={{ color: '#21759b' }} />
